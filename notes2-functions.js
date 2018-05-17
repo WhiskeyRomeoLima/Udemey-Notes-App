@@ -30,8 +30,8 @@ const removeNote = function(id) {
 const generateNoteDom = function(note){
     const noteEl = document.createElement('div');
     const button = document.createElement('button');
-    const textEl = document.createElement('span');
-
+    const textEl = document.createElement('a');
+    
     //setup remove button for note
     button.textContent = 'x';
     button.addEventListener('click', function() {
@@ -46,6 +46,10 @@ const generateNoteDom = function(note){
     } else {
         textEl.textContent = 'Unamed note'; 
     }
+
+    //textEl.href='/edit-note.html';
+    textEl.setAttribute('href', '/edit-note.html');
+    
     //append to noteEl in this order
     noteEl.appendChild(button);
     noteEl.appendChild(textEl);

@@ -10,11 +10,13 @@ const filters = {
 renderNotes(notes, filters); //initial search
 
 document.querySelector('#create-note').addEventListener('click', function (e) {
-    notes.push({id: uuidv4(), title: '', body: ''});
+    const noteId = uuidv4();
+    notes.push({id: noteId, title: '', body: ''});
     saveNotes(notes); 
-    renderNotes(notes, filters);
+    // renderNotes(notes, filters);
+    location.assign(`./edit-note.html#${noteId}`);
+    //location.assign('edit-note.html#' + noteId);
 });
-
 
 document.querySelector('#search-text').addEventListener('input', function (e) {
     filters.searchText = e.target.value;
