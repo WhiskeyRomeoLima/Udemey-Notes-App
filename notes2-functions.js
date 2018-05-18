@@ -46,7 +46,7 @@ const generateNoteDom = function(note){
     }
 
     //textEl.href='/edit-note.html';
-    textEl.setAttribute('href', '/edit-note.html');
+    textEl.setAttribute('href', `./edit-note.html#${note.id}`)
     
     //append to noteEl in this order
     noteEl.appendChild(button);
