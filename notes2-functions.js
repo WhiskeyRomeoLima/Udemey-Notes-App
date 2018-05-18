@@ -18,9 +18,7 @@ const saveNotes = function(notes) {
 
 //reomve a note
 const removeNote = function(id) {
-    const noteIndex = notes.findIndex(function(note) {
-        return note.id === id;
-    });
+    const noteIndex = notes.findIndex((note) => note.id === id);
     if (noteIndex > -1) {
         notes.splice(noteIndex, 1);
     }

@@ -14,6 +14,7 @@ document.querySelector('#create-note').addEventListener('click', function (e) {
     notes.push({id: noteId, title: '', body: ''});
     saveNotes(notes); 
     // renderNotes(notes, filters);
+    console.log(`edit-note.html#${noteId}`);
     location.assign(`./edit-note.html#${noteId}`);
     //location.assign('edit-note.html#' + noteId);
 });
