@@ -16,7 +16,7 @@ const saveNotes = function(notes) {
     localStorage.setItem('notes', JSON.stringify(notes));
 };
 
-//reomve a note
+//remove a note
 const removeNote = function(id) {
     const noteIndex = notes.findIndex((note) => note.id === id);
     if (noteIndex > -1) {

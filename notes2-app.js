@@ -3,6 +3,7 @@
 
 const notes = getSavedNotes();
 
+
 const filters = {
     searchText: ''
 };
@@ -27,6 +28,18 @@ document.querySelector('#filter-by').addEventListener('change', function (e) {
     console.log(e.target.value);
     //renderNotes(notes, filters);
 });
+
+// window.addEventListener('storage', function(e) {
+//     if (e.key === 'notes') {
+//         notes = JSON.parse(e.newValue); //notes were already update eleswhere so just get it
+//         renderNotes(notes, filters);  //then just re-render this page
+//     }
+// });
+
+// const birthDay = moment();
+// birthDay.year(1949).month(3).date(3);
+// console.log(birthDay.format('MMM D, YYYY'));
+
 
 
 // document.querySelector('#todo-form').addEventListener('submit', function(e) {
