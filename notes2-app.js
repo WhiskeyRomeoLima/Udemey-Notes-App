@@ -1,8 +1,7 @@
-
 /*jshint esversion: 6 */
 
 const notes = getSavedNotes();
-
+const notes2 = getSavedNotes();
 
 const filters = {
     searchText: '',
@@ -14,8 +13,14 @@ renderNotes(notes, filters); //initial search
 document.querySelector('#create-note').addEventListener('click', function (e) {
     const noteId = uuidv4();
     const timestamp = moment().valueOf();
-    notes.push({id: noteId, title: '', body: '',createdAt: timestamp, updatedAt: timestamp});
-    saveNotes(notes); 
+    notes.push({
+        id: noteId,
+        title: '',
+        body: '',
+        createdAt: timestamp,
+        updatedAt: timestamp
+    });
+    saveNotes(notes);
     location.assign(`./edit-note.html#${noteId}`);
     //location.assign('edit-note.html#' + noteId);
 });
