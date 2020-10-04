@@ -1,7 +1,6 @@
 /*jshint esversion: 6 */
 
 const notes = getSavedNotes();
-const notes2 = getSavedNotes();
 
 const filters = {
     searchText: '',
